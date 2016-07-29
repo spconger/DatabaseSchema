@@ -137,5 +137,5 @@ Create table Substitition
     SubstituionDate Date,
     SubstitutionApprover nvarchar(255),
     Constraint fk_Intent foreign key (IntentKey, CertCourseKey)
-        references IntentCourse(IntentKey, CourseKey)
+        references IntentCourse(CourseKey, intentKey)
 )
