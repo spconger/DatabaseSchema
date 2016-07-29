@@ -118,11 +118,24 @@ Create table Section
 
 )
 Go
-Create Table Enrollments
+Create Table Enrollment
 (
    Sectionkey int foreign key references Section(sectionKey),
    PersonKey int foreign key references Student(PersonKey),
    EnrollmentFinalGrade decimal(3,2),
    Constraint pk_Enrollments primary key (SectionKey, PersonKey),
    Constraint ck_finalGrade check (EnrollmentFinalGrade between 0 and 4)
+)
+Go
+Create table Substitition
+(
+    SubstitutionKey int identity(1,1) primary key,
+    PersonKey int foreign key references Student(personKey),
+    IntentKey int, 
+    CertCoursekey int,
+    SubstituteCourseKey int foreign key references Course(CourseKey),
+    SubstituionDate Date,
+    SubstitutionApprover nvarchar(255),
+    Constraint fk_Intent foreign key (IntentKey, CertCourseKey)
+        references IntentCourse(IntentKey, CourseKey)
 )
