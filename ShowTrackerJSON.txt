@@ -1,0 +1,83 @@
+Instructions for getting and setting up Mongo
+http://congerprep.blogspot.com/2016/07/first-steps-with-nosql-mongo.html
+
+
+
+collection venue
+
+(
+[
+{ _id :"JazzAlley", address : "304 Fifth Avenue", city:"Seattle", zipcode: "98009", email:"jalley@gmail.com", url:"http://www.JazzAlley.com", restrictions : "must be 21 or older", genres: ["Jazz", "Blues"]},
+{ _id :"Comet", address: "113 Pike", city:"Seattle", zipcode: "98012", email:"Comet@gmail.com", url:"http://www.Comet.com", restrictions : "must be 21 or older", genres: "Rock"},
+{ _id :"Arena", address: "110 Second", city:"Seattle", zipcode: "98030", email:"Arena@gmail.com", url:"http://www.Arena.com", genres: ["Rock","Pop","Hip Hop", "Alternative"]},
+{ _id :"Paramount", address: "801 Pine", city:"Seattle", zipcode: "98022", email:"Paramount@gmail.com", url:"http://www.Paramount.com", restrictions: "Varies", genres: ["Rock","Pop","Hip Hop", "Alternative", "Folk", "Jazz"]}
+]
+)
+
+collection fans
+
+(
+[
+{name: "Joseph Manly", email: "jmanly@outllook.com", artists: ["Death cab for Cutie", "Of Monsters and Men", "Lorde"], genres:["Alternative", "Folk","Rock"]},
+{name: "Sarah Tamlin", email: "sTamlin@outllook.com", artists: ["Daughter", "Metro"], genres:"Alternative"},
+{name: "Jeff Keel", email: "keel@yahoo.com", artists:  "Pearl Jam", genres:["Alternative", "Rock"]},
+{name: "Steve Conger", email: "sconger@outllook.com", artists: ["Bob Dylan", "Neil Young","Of Monsters and Men", "Lorde"], genres:["Alternative", "Folk","Rock"]},
+{name: "Thomas Brooke", email: "Brook@outllook.com",  genres:"Jazz"},
+{name: "Kathy Brown", email: "kbrown@outllok.com", artists: [ "Of Monsters and Men"], genres:["Alternative", "Folk","Rock"]}
+]
+)
+
+collection shows
+
+(
+[
+{ showName : "OMAM 2017 World tour", artist:"Of Monsters and Men", venue_id:"Paramount", date: new Date('Jan 28, 2017'),time: "8:00 PM", tickets : "available at ticketmaster or at Paramount." },
+{ showName : "Nobel Tour", artist:["Bob Dylan", "Neil Young"], venue_id:"Arena", date: new Date('Feb 16, 2017'),time: "8:00 PM", tickets : "available at ticketmaster" },
+{ showName : "Pearl Jam", artist:"Pearl Jam", venue_id:"Paramount", date: new Date('Feb 20, 2017'),time: "9:00 PM", tickets : "available at ticketmaster or at Paramount." },
+{ showName : "A night of Jazz", artist:"Roy Hargrove Quintet", venue_id:"JazzAlley", date: new Date('Mar 2, 2017'),time: "7:00 PM", tickets : "available at ticketmaster or at Jazz Alley." }
+]
+)
+
+collection artists
+
+(
+[
+{artist: "Death Cab for Cutie", genres: ["Alternative","Pop"]},
+{artist: "Of Monsters and Men", genres: ["Alternative","Pop", "Folk"]},
+{artist: "Lorde", genres: ["Alternative","Pop"]},
+{artist: "Daughter", genres: ["Alternative","Pop"]},
+{artist: "Metro", genres: ["Alternative","Pop"]},
+{artist: "Pearl Jam", genres: ["Alternative","Rock"]},
+{artist: "Bob Dylan", genres: ["Rock","Folk"]},
+{artist: "Neil Young", genres: ["Rock", "Folk"]},
+{artist: "Roy Hargrove Quintet", genres: "Jazz"}
+]
+)
+
+
+queries: find the fans who follow Of Monsters and Men. return only their names and emails.
+
+db.fans.find({artists:"Of Monsters and Men"})
+
+db.fans.find({artists:"Of Monsters and Men"},{"name":1, "email":1})
+
+db.fans.find({artists:"Of Monsters and Men"},{"name":1, "email":1, "_id":0})
+
+db.shows.find({artist:"Of Monsters and Men"})
+
+queries find which artists and which fans like aternative, then which shows have those artists
+
+db.artists.find({genres:"Alternative"})
+
+db.fans.find({genres:"Alternative"}, {"name":1, "email":1, "_id":0})
+
+db.shows.find({$or:[
+{"artist" : "Of Monsters and Men"}, 
+{"artist": "Death Cab for Cutie"}, 
+{"artist": "Pearl Jam"}, 
+{"artist": "Daughter"},
+{"artist": "Metro"}
+]
+}
+)
+
