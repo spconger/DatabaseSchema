@@ -123,7 +123,7 @@ $$ LANGUAGE sql;
 
 SELECT addperson(
   'Joseph', 'Rodgers', 'joseph.rodgers@hotmail.com',
-  '2065552010',TRUE,'641', ‘222 8th Avenue,'Seattle',
+  '2065552010',TRUE,'641', â€˜222 8th Avenue,'Seattle',
   'WA', '98001','RodgersPass'
   );
 
@@ -169,7 +169,7 @@ $$ LANGUAGE sql;
 SELECT editperson(
   141,'Joseph', 'Rodgers', 'joseph.rodgers@hotmail.com',
   '2065552010',TRUE,'212', '1200 150th Street','Seattle',
-  'WA', '98001
+  'WA', '98001'
 );
 
 ALTER TABLE grantapplication
