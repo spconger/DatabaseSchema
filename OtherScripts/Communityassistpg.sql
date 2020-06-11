@@ -3,9 +3,9 @@
 --
 
 -- Dumped from database version 12.1
--- Dumped by pg_dump version 12.2
+-- Dumped by pg_dump version 12.3
 
--- Started on 2020-03-31 12:08:53
+-- Started on 2020-06-11 13:09:31
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1273,14 +1273,14 @@ INSERT INTO public.person VALUES (3, 'Jacobs', 'Jamal', 'JAnderson@gmail.com', '
 INSERT INTO public.person VALUES (29, 'Hahn', 'Sue', 'LCaroll@gmail.com', '2065559913   ', '2019-09-10');
 INSERT INTO public.person VALUES (17, 'Kerry', 'Samantha', 'AKerry@gmail.com', '2065556712   ', '2019-07-06');
 INSERT INTO public.person VALUES (1, 'Kendle', 'Lynn', 'lynn.kendle@gmail.com', '2065551312   ', '2019-02-02');
+INSERT INTO public.person VALUES (9, 'Patterson', 'Jody', 'JPatterson@gmail.com', '2065554431   ', '2020-06-10');
+INSERT INTO public.person VALUES (13, 'Masters', 'Fae', 'FMasters@gmail.com', '2065552123   ', '2020-06-21');
 INSERT INTO public.person VALUES (2, 'Carol', 'Linda', 'LindaCarol@gmail.com', '2065551234   ', '2021-03-25');
 INSERT INTO public.person VALUES (6, 'Carmel', 'Bob', 'BCarmel@gmail.com', '2065551202   ', '2020-05-12');
 INSERT INTO public.person VALUES (7, 'Lewis', 'Mary', 'MLewis@gmail.com', '3605551000   ', '2020-05-21');
 INSERT INTO public.person VALUES (8, 'Tanner', 'Thomas', 'TTanner@gmail.com', '2065553423   ', '2020-06-01');
-INSERT INTO public.person VALUES (9, 'Patterson', 'Jody', 'JPatterson@gmail.com', '206555443    ', '2020-06-10');
 INSERT INTO public.person VALUES (10, 'Brown', 'Matt', 'MBrown@gmail.com', '2065551113   ', '2020-06-15');
 INSERT INTO public.person VALUES (12, 'Peters', 'Jay', 'JPeters@gmail.com', '2065559821   ', '2020-06-17');
-INSERT INTO public.person VALUES (13, 'Masters', 'Fae', 'FMasters@gmail.com', '20652123     ', '2020-06-21');
 INSERT INTO public.person VALUES (14, 'Moon', 'Tina', 'TMoon@gmail.com', '2855553157   ', '2020-07-03');
 INSERT INTO public.person VALUES (15, 'Nguyen', 'Lu', 'LNguyen@gmail.com', '2065551223   ', '2020-06-05');
 INSERT INTO public.person VALUES (16, 'Chau', 'Mary', 'MChau@gmail.com', '2855550023   ', '2020-07-06');
@@ -1343,7 +1343,6 @@ INSERT INTO public.person VALUES (75, 'Taylor', 'Beth', 'btaylor@yahoo.com', '20
 INSERT INTO public.person VALUES (76, 'Madison', 'Lawrence', 'lmadison@msn.com', '3605552123   ', '2021-03-12');
 INSERT INTO public.person VALUES (77, 'Gates', 'Bill', 'ggates@microsoft.com', '2065551111   ', '2021-03-18');
 INSERT INTO public.person VALUES (78, 'Green', 'Lewis', 'lg@outlook.com', '2965557735   ', '2021-03-20');
-INSERT INTO public.person VALUES (79, 'Allen', 'Paul', 'pa@outlook.com', '2535550023   ', '2021-03-20');
 INSERT INTO public.person VALUES (80, 'Fortier', 'Karen', 'KFortier@outlook.com', '2605559090   ', '2021-03-26');
 INSERT INTO public.person VALUES (81, 'Nguyen', 'Lee', 'nguyen200@msn.com', '2065553312   ', '2021-04-01');
 INSERT INTO public.person VALUES (82, 'Christensen', 'Judy', 'jChristensen@seattleu.edu', '2535552177   ', '2021-04-05');
@@ -1396,6 +1395,7 @@ INSERT INTO public.person VALUES (129, 'Norman', 'Jennifer', 'Jennifer@msn.com',
 INSERT INTO public.person VALUES (130, 'Nelson', 'Mark', 'MarkNelson@gmail.com', NULL, '2021-12-20');
 INSERT INTO public.person VALUES (131, 'Mason', 'Thomas', 'thomas.mason@msn.com', '2065557892   ', '2021-12-20');
 INSERT INTO public.person VALUES (132, 'Johnson', 'Felicia', 'Felicia@gmail.com', '3605551143   ', '2021-12-22');
+INSERT INTO public.person VALUES (79, 'Allen', 'Nathan', 'na@outlook.com', '2535550023   ', '2021-03-20');
 
 
 --
@@ -1417,8 +1417,8 @@ INSERT INTO public.personaddress VALUES (23, 18, '1343 Rainier', 'Kent', 'WA', '
 INSERT INTO public.personaddress VALUES (49, 42, '321 North ave', 'Kent', 'WA', '98031      ', '222');
 INSERT INTO public.personaddress VALUES (38, 32, '45467 Mason', 'Renton', 'WA', '98055      ', '345');
 INSERT INTO public.personaddress VALUES (52, 45, '121 Trainside', 'Renton', 'WA', '98055      ', '214');
-INSERT INTO public.personaddress VALUES (62, 55, '95 West Hannford', 'Tukwilla', 'WA', '98108      ', 'Suite 545');
-INSERT INTO public.personaddress VALUES (64, 57, '1000 Tukwilla Drive', 'Tukwilla', 'WA', '98108      ', 'Suite 99');
+INSERT INTO public.personaddress VALUES (62, 55, '95 West Hannford', 'Tukwila', 'WA', '98108      ', 'Suite 545');
+INSERT INTO public.personaddress VALUES (64, 57, '1000 Tukwilla Drive', 'Tukwila', 'WA', '98108      ', 'Suite 99');
 INSERT INTO public.personaddress VALUES (122, 76, '303 Eastlake Way', 'Seattle ', 'WA', '98100      ', NULL);
 INSERT INTO public.personaddress VALUES (142, 96, '1201 East 8th', 'Bellevue', 'WA', '98006      ', '756');
 INSERT INTO public.personaddress VALUES (182, 114, '204 56th Street', 'Redmond', 'WA', '98033      ', NULL);
@@ -1575,7 +1575,7 @@ SELECT pg_catalog.setval('public.businessrule_businessrulekey_seq', 8, true);
 -- Name: donation_donationkey_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.donation_donationkey_seq', 67, true);
+SELECT pg_catalog.setval('public.donation_donationkey_seq', 68, true);
 
 
 --
@@ -1947,7 +1947,7 @@ ALTER TABLE ONLY public.personaddress
     ADD CONSTRAINT personaddress_personkey_fkey FOREIGN KEY (personkey) REFERENCES public.person(personkey);
 
 
--- Completed on 2020-03-31 12:08:53
+-- Completed on 2020-06-11 13:09:32
 
 --
 -- PostgreSQL database dump complete
