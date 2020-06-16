@@ -5,7 +5,7 @@
 -- Dumped from database version 12.1
 -- Dumped by pg_dump version 12.3
 
--- Started on 2020-06-16 11:39:31
+-- Started on 2020-06-16 11:45:58
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1268,10 +1268,6 @@ INSERT INTO public.person VALUES (11, 'Smith', 'Jerry', 'JSmith@gmail.com', '360
 INSERT INTO public.person VALUES (55, 'Olson', 'Sonya', 'solson@gmail.com', '2585556122   ', '2020-12-02');
 INSERT INTO public.person VALUES (4, 'Zimmerman', 'Toby', 'TZimmerman@gmail.com', '2065551212   ', '2019-02-03');
 INSERT INTO public.person VALUES (58, 'Master', 'Carley', 'cmasters@msn.com', '2065553332   ', '2019-12-05');
-INSERT INTO public.person VALUES (5, 'Valdez', 'Roberto', 'LMann@gmail.com', '2065550012   ', '2019-03-01');
-INSERT INTO public.person VALUES (3, 'Jacobs', 'Jamal', 'JAnderson@gmail.com', '2065551100   ', '2019-02-02');
-INSERT INTO public.person VALUES (29, 'Hahn', 'Sue', 'LCaroll@gmail.com', '2065559913   ', '2019-09-10');
-INSERT INTO public.person VALUES (17, 'Kerry', 'Samantha', 'AKerry@gmail.com', '2065556712   ', '2019-07-06');
 INSERT INTO public.person VALUES (1, 'Kendle', 'Lynn', 'lynn.kendle@gmail.com', '2065551312   ', '2019-02-02');
 INSERT INTO public.person VALUES (9, 'Patterson', 'Jody', 'JPatterson@gmail.com', '2065554431   ', '2020-06-10');
 INSERT INTO public.person VALUES (13, 'Masters', 'Fae', 'FMasters@gmail.com', '2065552123   ', '2020-06-21');
@@ -1396,6 +1392,10 @@ INSERT INTO public.person VALUES (130, 'Nelson', 'Mark', 'MarkNelson@gmail.com',
 INSERT INTO public.person VALUES (131, 'Mason', 'Thomas', 'thomas.mason@msn.com', '2065557892   ', '2021-12-20');
 INSERT INTO public.person VALUES (132, 'Johnson', 'Felicia', 'Felicia@gmail.com', '3605551143   ', '2021-12-22');
 INSERT INTO public.person VALUES (79, 'Allen', 'Nathan', 'na@outlook.com', '2535550023   ', '2021-03-20');
+INSERT INTO public.person VALUES (5, 'Valdez', 'Roberto', 'RValdez@gmail.com', '2065550012   ', '2019-03-01');
+INSERT INTO public.person VALUES (3, 'Jacobs', 'Jamal', 'JJamal@gmail.com', '2065551100   ', '2019-02-02');
+INSERT INTO public.person VALUES (29, 'Hahn', 'Sue', 'SueHahn@gmail.com', '2065559913   ', '2019-09-10');
+INSERT INTO public.person VALUES (17, 'Kerry', 'Samantha', 'SKerry@gmail.com', '2065556712   ', '2019-07-06');
 
 
 --
@@ -1947,7 +1947,7 @@ ALTER TABLE ONLY public.personaddress
     ADD CONSTRAINT personaddress_personkey_fkey FOREIGN KEY (personkey) REFERENCES public.person(personkey);
 
 
--- Completed on 2020-06-16 11:39:31
+-- Completed on 2020-06-16 11:45:58
 
 --
 -- PostgreSQL database dump complete
