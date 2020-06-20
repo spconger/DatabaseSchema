@@ -5,7 +5,7 @@
 -- Dumped from database version 12.1
 -- Dumped by pg_dump version 12.3
 
--- Started on 2020-06-16 11:45:58
+-- Started on 2020-06-20 11:26:28
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -763,14 +763,14 @@ ALTER TABLE ONLY public.status ALTER COLUMN statuskey SET DEFAULT nextval('publi
 -- Data for Name: businessrule; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.businessrule VALUES (1, 'All users, whether employee, donor or applicant are stored in the person table.');
 INSERT INTO public.businessrule VALUES (2, 'Every person is given a login in the logintable.');
 INSERT INTO public.businessrule VALUES (3, 'In the logintable the user name is the first letter of the first name and the whole last name.');
 INSERT INTO public.businessrule VALUES (4, 'For our purposes the plain text password is the user last name concatenated with the word "Pass."');
 INSERT INTO public.businessrule VALUES (5, 'Applicants can only apply for a grant of one of the listed types.');
-INSERT INTO public.businessrule VALUES (6, 'Each type has a one- time maximum and a lifetime maximum that can be applied for.');
 INSERT INTO public.businessrule VALUES (7, 'Each grant must be reviewed by an employee.');
-INSERT INTO public.businessrule VALUES (8, 'A grant has a current status: pending, granted, reduced or denied.');
+INSERT INTO public.businessrule VALUES (1, 'All users, whether employees, donors, or applicants, are stored in the person table.');
+INSERT INTO public.businessrule VALUES (6, 'Each type has a one-time maximum and a lifetime maximum that can be applied for.');
+INSERT INTO public.businessrule VALUES (8, 'A grant has a current status: pending, granted, reduced, or denied.');
 
 
 --
@@ -887,7 +887,6 @@ INSERT INTO public.employeeposition VALUES (5, 7, 8, '2019-12-05');
 -- Data for Name: grantapplication; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.grantapplication VALUES (1, '2020-07-06 00:00:00', 16, 3, 450, 'I managed tuition but I cannot afford the math and biology text books', '43ae7bd1-7dc1-4f6a-9406-2b0ee41dd6f4');
 INSERT INTO public.grantapplication VALUES (2, '2020-07-13 00:00:00', 18, 2, 500, 'I am short on rent this month', '7cf2b79d-83fb-4d8e-8869-fd8e3bbccc3f');
 INSERT INTO public.grantapplication VALUES (3, '2020-08-25 00:00:00', 24, 7, 200, 'I need help with childcare until my check comes in from my new job', 'c7111d67-2784-4d84-ae84-8932c3542db9');
 INSERT INTO public.grantapplication VALUES (4, '2020-08-25 00:00:00', 15, 1, 225, 'I need help with food for my family', '0c0616a2-1119-49c8-b6fa-daea1e701789');
@@ -897,14 +896,12 @@ INSERT INTO public.grantapplication VALUES (8, '2020-10-03 00:00:00', 36, 1, 150
 INSERT INTO public.grantapplication VALUES (6, '2020-08-23 00:00:00', 28, 9, 200, 'I need house repairs that can''t wait', '9d689406-698a-4c13-a229-d311884d7ff2');
 INSERT INTO public.grantapplication VALUES (11, '2020-10-18 00:00:00', 41, 1, 120.00, 'I need extra grocery money to feed the kids', '7a8e1a68-9594-4f5f-8501-9055dff79965');
 INSERT INTO public.grantapplication VALUES (12, '2020-11-01 00:00:00', 45, 2, 200, 'I am 200 short this month on my rent', 'c144e697-dae6-4bb5-b3be-8f9df00b9106');
-INSERT INTO public.grantapplication VALUES (14, '2020-11-10 00:00:00', 47, 2, 350, 'A roomate left and I have to cover his rent this month', '47c69261-fe1e-4e5c-9955-29ae37c1c368');
 INSERT INTO public.grantapplication VALUES (15, '2020-11-17 00:00:00', 49, 9, 125.00, 'I have higher than usual utility bills this month', 'c2d639d5-b056-4926-8fa5-8e0e594bd2d0');
 INSERT INTO public.grantapplication VALUES (16, '2020-11-26 00:00:00', 53, 3, 450.00, 'My financial aid was dropped and I need this much to retain classes', '2f58d290-fbcb-4fed-b1b6-f15c244fd0c8');
 INSERT INTO public.grantapplication VALUES (17, '2020-11-27 00:00:00', 54, 1, 150.00, 'food stamp allotment was lowered', '213c77cc-54ca-4d75-a0ca-88d3b13340b7');
 INSERT INTO public.grantapplication VALUES (18, '2020-12-03 00:00:00', 56, 2, 800.00, 'I can''t cover rent this month', '4730b1ca-8437-4fab-8cd2-b1d6f8007404');
 INSERT INTO public.grantapplication VALUES (19, '2020-12-15 00:00:00', 59, 7, 375.50, 'Just started a new job and need help with first childcare payment', '87aa9d67-604f-41b8-900a-dd8a233e9f2f');
 INSERT INTO public.grantapplication VALUES (20, '2020-12-20 00:00:00', 62, 1, 450.00, 'Just need a little help with groceries', 'fc4c3921-2697-4bec-8ac2-7ca96fc28f4a');
-INSERT INTO public.grantapplication VALUES (21, '2020-12-21 00:00:00', 63, 4, 650.00, 'I had to have an emergancy root canal', '5836d15c-6cc3-4f52-a09b-0f188add1bcc');
 INSERT INTO public.grantapplication VALUES (22, '2021-02-03 00:00:00', 72, 2, 1300.00, 'Unable to pay rent this month', '08ae6b8d-5a7b-4a8c-b33e-f5c947be993a');
 INSERT INTO public.grantapplication VALUES (23, '2021-02-21 00:00:00', 75, 7, 250, 'Need help with childcare this month', '90578696-ae0a-4cf7-8701-4ca24cf91707');
 INSERT INTO public.grantapplication VALUES (24, '2021-03-12 00:00:00', 76, 3, 200, 'I need help getting my school books', '69bcdedf-8027-49f4-b3e6-2cff4fffec06');
@@ -917,7 +914,6 @@ INSERT INTO public.grantapplication VALUES (30, '2021-05-05 00:00:00', 86, 1, 20
 INSERT INTO public.grantapplication VALUES (31, '2021-05-23 00:00:00', 90, 7, 200, 'I am a little short for childcare this month', '484796e4-0925-45af-881f-5f1d632504ba');
 INSERT INTO public.grantapplication VALUES (32, '2021-06-08 00:00:00', 91, 4, 200, 'I needed a root canal. This 200 only makes one payment', 'f6d2b5a3-d409-498d-829f-3e2c772d9807');
 INSERT INTO public.grantapplication VALUES (33, '2021-06-19 00:00:00', 92, 7, 250, 'I can''t make my childcare payment this month', 'cf05b39e-aed5-4fa8-9800-42a1fde04ca0');
-INSERT INTO public.grantapplication VALUES (34, '2021-06-08 00:00:00', 93, 2, 800, 'A roomate left and I have to cover his payment until I get a new roomate', '2704f8ad-0953-434c-bea7-20adaf905473');
 INSERT INTO public.grantapplication VALUES (35, '2021-07-12 00:00:00', 95, 5, 500.00, 'I injured my back while moving to this apartment', '8cdad9e0-4bb7-4153-baf8-53ea5427ddfb');
 INSERT INTO public.grantapplication VALUES (36, '2021-07-13 00:00:00', 96, 1, 200, 'I need help feeding my kids', '1f334ca3-7c7d-4fc5-87d5-3cfe02029462');
 INSERT INTO public.grantapplication VALUES (37, '2021-07-21 00:00:00', 98, 5, 300.00, 'I injured my back while moving to this apartment', '4abc24bb-340e-4690-b88e-fdb9f9aefe50');
@@ -932,7 +928,6 @@ INSERT INTO public.grantapplication VALUES (46, '2021-11-12 00:00:00', 118, 1, 8
 INSERT INTO public.grantapplication VALUES (47, '2021-11-16 00:00:00', 119, 3, 200.00, 'I really need to get the biology textbook', 'b421d5de-641a-46f1-b86c-1c54a4535b84');
 INSERT INTO public.grantapplication VALUES (48, '2021-11-25 00:00:00', 123, 4, 200.00, 'I need to make a payment to my dentist', '15f41439-5121-4527-a0d2-ee3230ad725c');
 INSERT INTO public.grantapplication VALUES (49, '2021-11-28 00:00:00', 124, 1, 200.00, 'I overspent my budget this month and can''t afford groceries', '63a04145-a3df-4f88-81c3-c5c324eceec3');
-INSERT INTO public.grantapplication VALUES (50, '2021-12-02 00:00:00', 125, 7, 150.00, 'I had to change child care providers and there is an intial deposit', '11e1d585-1d98-4629-a207-70e3fa93fa87');
 INSERT INTO public.grantapplication VALUES (53, '2021-12-20 00:00:00', 130, 3, 600.00, 'I need to purchase a laptop for my computer classes', 'a1137b89-b408-46d5-8a04-ec385c5c796b');
 INSERT INTO public.grantapplication VALUES (9, '2020-10-10 00:00:00', 37, 7, 425, 'I can''t cover childcare this month', 'ae61fd44-3de8-479b-9d5b-55329c23bd89');
 INSERT INTO public.grantapplication VALUES (10, '2020-10-17 00:00:00', 40, 4, 426.79, 'I had emergency dental work and cannot pay this remainder', '8fae8cc6-f830-4b98-beba-b746cd80e9f5');
@@ -941,6 +936,11 @@ INSERT INTO public.grantapplication VALUES (43, '2021-09-30 00:00:00', 111, 9, 1
 INSERT INTO public.grantapplication VALUES (51, '2021-12-07 00:00:00', 126, 7, 300.00, 'I need money for an initial childcare payment', '6d4d4cef-d680-4538-85d1-4601c119b752');
 INSERT INTO public.grantapplication VALUES (52, '2021-12-18 00:00:00', 129, 3, 450.00, 'I need help with tuition for the coming quarter. It is my last quarter', 'bff6e559-76ed-4289-81f6-b708f79ceb4f');
 INSERT INTO public.grantapplication VALUES (54, '2021-12-22 00:00:00', 132, 5, 400.00, 'Help paying off an emergency room visit', '06032ddb-1598-40ed-b409-b9c67770d2b3');
+INSERT INTO public.grantapplication VALUES (1, '2020-07-06 00:00:00', 16, 3, 450, 'I managed tuition but I cannot afford the math and biology textbooks.', '43ae7bd1-7dc1-4f6a-9406-2b0ee41dd6f4');
+INSERT INTO public.grantapplication VALUES (14, '2020-11-10 00:00:00', 47, 2, 350, 'A roommate left and I have to cover his rent this month', '47c69261-fe1e-4e5c-9955-29ae37c1c368');
+INSERT INTO public.grantapplication VALUES (21, '2020-12-21 00:00:00', 63, 4, 650.00, 'I had to have an emergency root canal', '5836d15c-6cc3-4f52-a09b-0f188add1bcc');
+INSERT INTO public.grantapplication VALUES (34, '2021-06-08 00:00:00', 93, 2, 800, 'A roommate left and I have to cover his payment until I get a new roommate', '2704f8ad-0953-434c-bea7-20adaf905473');
+INSERT INTO public.grantapplication VALUES (50, '2021-12-02 00:00:00', 125, 7, 150.00, 'I had to change childcare providers and there is an initial deposit.', '11e1d585-1d98-4629-a207-70e3fa93fa87');
 
 
 --
@@ -959,12 +959,9 @@ INSERT INTO public.grantreview VALUES (5, 5, 2, '2020-08-27 00:00:00', 'Looking 
 INSERT INTO public.grantreview VALUES (6, 5, 2, '2020-07-07 00:00:00', 'Payment arranged, deny grant.');
 INSERT INTO public.grantreview VALUES (7, 6, 6, '2020-08-25 00:00:00', 'We found other means for the applicant to get help with house repairs.');
 INSERT INTO public.grantreview VALUES (8, 7, 2, '2020-09-20 00:00:00', 'Recommend grant but explore other solutions for future shortfalls.');
-INSERT INTO public.grantreview VALUES (9, 8, 6, '2020-10-05 00:00:00', 'Recommend grant');
-INSERT INTO public.grantreview VALUES (10, 9, 6, '2020-10-11 00:00:00', 'Recommend one time grant.');
 INSERT INTO public.grantreview VALUES (11, 10, 2, '2020-10-18 00:00:00', 'Very specific amount. Suggest granting.');
 INSERT INTO public.grantreview VALUES (12, 11, 2, '2020-10-18 00:00:00', 'Grant one time, but we should look at alternative funding.');
 INSERT INTO public.grantreview VALUES (13, 12, 6, '2020-10-18 00:00:00', 'Suggest granting.');
-INSERT INTO public.grantreview VALUES (14, 13, 6, '2020-11-03 00:00:00', 'This is a reasonable one time request.');
 INSERT INTO public.grantreview VALUES (15, 14, 6, '2020-11-12 00:00:00', 'Suggest request be  granted.');
 INSERT INTO public.grantreview VALUES (16, 15, 2, '2020-11-18 00:00:00', 'Grant.');
 INSERT INTO public.grantreview VALUES (17, 16, 6, '2020-11-27 00:00:00', 'Can''t pay tuition for this person every quarter.');
@@ -973,7 +970,6 @@ INSERT INTO public.grantreview VALUES (19, 17, 2, '2020-11-28 00:00:00', 'This c
 INSERT INTO public.grantreview VALUES (20, 18, 2, '2020-12-03 00:00:00', 'We can''t fund every month''s rent.');
 INSERT INTO public.grantreview VALUES (21, 18, 2, '2020-12-04 00:00:00', 'We arranged an additional roommate. Request reduced to 300--one time only.');
 INSERT INTO public.grantreview VALUES (22, 19, 6, '2020-12-15 00:00:00', 'Grant.');
-INSERT INTO public.grantreview VALUES (24, 21, 2, '2020-12-23 00:00:00', 'Arranged payment schedule with Dentist, reduce to 200.');
 INSERT INTO public.grantreview VALUES (44, 36, 6, '2021-07-15 00:00:00', 'Grant one time. Referred to other services.');
 INSERT INTO public.grantreview VALUES (45, 37, 6, '2021-07-22 00:00:00', 'Similar to recent claim, but this one does have medical documentation. Grant.');
 INSERT INTO public.grantreview VALUES (46, 38, 6, '2021-07-14 00:00:00', 'Grant.');
@@ -992,18 +988,19 @@ INSERT INTO public.grantreview VALUES (63, 50, 1, '2021-12-02 00:00:00', 'Grant.
 INSERT INTO public.grantreview VALUES (64, 51, 1, '2021-12-07 00:00:00', 'Grant.');
 INSERT INTO public.grantreview VALUES (65, 52, 1, '2021-12-18 00:00:00', 'Grant.');
 INSERT INTO public.grantreview VALUES (67, 54, 6, '2021-12-22 00:00:00', 'Grant.');
+INSERT INTO public.grantreview VALUES (9, 8, 6, '2020-10-05 00:00:00', 'Recommend grant.');
+INSERT INTO public.grantreview VALUES (10, 9, 6, '2020-10-11 00:00:00', 'Recommend one-time grant.');
+INSERT INTO public.grantreview VALUES (14, 13, 6, '2020-11-03 00:00:00', 'This is a reasonable one-time request.');
+INSERT INTO public.grantreview VALUES (24, 21, 2, '2020-12-23 00:00:00', 'Arranged payment schedule with dentist, reduce to 200.');
 INSERT INTO public.grantreview VALUES (23, 20, 2, '2020-12-21 00:00:00', 'Need to find additional funding directed to food bank reduce to 150.');
 INSERT INTO public.grantreview VALUES (25, 22, 1, '2021-02-03 00:00:00', 'This looks like a recurring issue. We should find alternate solution.');
-INSERT INTO public.grantreview VALUES (26, 22, 6, '2021-02-04 00:00:00', 'Agreed. have directed the client to Rent Assistance org.');
 INSERT INTO public.grantreview VALUES (27, 23, 1, '2021-02-23 00:00:00', 'Grant request.');
 INSERT INTO public.grantreview VALUES (28, 24, 1, '2021-03-14 00:00:00', 'Recommend granting.');
 INSERT INTO public.grantreview VALUES (29, 25, 1, '2021-03-24 00:00:00', 'Recommend granting but would like another review.');
 INSERT INTO public.grantreview VALUES (30, 25, 6, '2021-03-25 00:00:00', 'I concur. It is a one-time expense.');
 INSERT INTO public.grantreview VALUES (31, 26, 1, '2021-04-02 00:00:00', 'We met with dentist and have reduced the amount to 300.');
-INSERT INTO public.grantreview VALUES (32, 27, 1, '2021-04-06 00:00:00', 'This is a recurring problem. I directed her to other agencies that could provide more long term help..');
 INSERT INTO public.grantreview VALUES (33, 28, 6, '2021-04-11 00:00:00', 'Recommend grant but also getting client enrolled for financial planning.');
 INSERT INTO public.grantreview VALUES (35, 30, 6, '2021-05-05 00:00:00', 'Doesn''t seem to be an ongoing problem. Recommend grant.');
-INSERT INTO public.grantreview VALUES (36, 31, 6, '2021-05-25 00:00:00', 'Recommend Grant.');
 INSERT INTO public.grantreview VALUES (37, 32, 1, '2021-06-10 00:00:00', 'Recommend pay.');
 INSERT INTO public.grantreview VALUES (38, 33, 6, '2021-06-20 00:00:00', 'Recommend pay, but also help find other resources.');
 INSERT INTO public.grantreview VALUES (39, 34, 6, '2021-06-10 00:00:00', 'Recommend, also help find a roommate.');
@@ -1011,6 +1008,9 @@ INSERT INTO public.grantreview VALUES (40, 35, 6, '2021-07-14 00:00:00', 'Not su
 INSERT INTO public.grantreview VALUES (41, 35, 1, '2021-07-15 00:00:00', 'I agree. There is no medical record.');
 INSERT INTO public.grantreview VALUES (42, 35, 6, '2021-07-15 00:00:00', 'Decision to deny.');
 INSERT INTO public.grantreview VALUES (43, 36, 1, '2021-07-15 00:00:00', 'Legitimate, but we need to find longer term assistance.');
+INSERT INTO public.grantreview VALUES (26, 22, 6, '2021-02-04 00:00:00', 'Agreed. Have directed the client to Rent Assistance org.');
+INSERT INTO public.grantreview VALUES (32, 27, 1, '2021-04-06 00:00:00', 'This is a recurring problem. I directed her to other agencies that could provide more long-term help..');
+INSERT INTO public.grantreview VALUES (36, 31, 6, '2021-05-25 00:00:00', 'Recommend grant.');
 
 
 --
@@ -1947,7 +1947,7 @@ ALTER TABLE ONLY public.personaddress
     ADD CONSTRAINT personaddress_personkey_fkey FOREIGN KEY (personkey) REFERENCES public.person(personkey);
 
 
--- Completed on 2020-06-16 11:45:58
+-- Completed on 2020-06-20 11:26:29
 
 --
 -- PostgreSQL database dump complete
