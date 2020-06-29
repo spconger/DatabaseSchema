@@ -5,7 +5,7 @@
 -- Dumped from database version 12.1
 -- Dumped by pg_dump version 12.3
 
--- Started on 2020-06-09 11:23:13
+-- Started on 2020-06-29 11:24:34
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,7 +19,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 2 (class 3079 OID 16669)
+-- TOC entry 2 (class 3079 OID 26604)
 -- Name: pgcrypto; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -36,7 +36,7 @@ COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
 
 
 --
--- TOC entry 273 (class 1255 OID 16706)
+-- TOC entry 273 (class 1255 OID 26641)
 -- Name: assign_grade(integer); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -59,7 +59,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 203 (class 1259 OID 16707)
+-- TOC entry 203 (class 1259 OID 26642)
 -- Name: businessrule; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -72,7 +72,7 @@ CREATE TABLE public.businessrule (
 ALTER TABLE public.businessrule OWNER TO postgres;
 
 --
--- TOC entry 204 (class 1259 OID 16713)
+-- TOC entry 204 (class 1259 OID 26648)
 -- Name: businessrule_businessrulekey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -97,7 +97,7 @@ ALTER SEQUENCE public.businessrule_businessrulekey_seq OWNED BY public.businessr
 
 
 --
--- TOC entry 205 (class 1259 OID 16715)
+-- TOC entry 205 (class 1259 OID 26650)
 -- Name: certadmin; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -111,7 +111,7 @@ CREATE TABLE public.certadmin (
 ALTER TABLE public.certadmin OWNER TO postgres;
 
 --
--- TOC entry 206 (class 1259 OID 16718)
+-- TOC entry 206 (class 1259 OID 26653)
 -- Name: certadmin_certadminkey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -136,7 +136,7 @@ ALTER SEQUENCE public.certadmin_certadminkey_seq OWNED BY public.certadmin.certa
 
 
 --
--- TOC entry 207 (class 1259 OID 16720)
+-- TOC entry 207 (class 1259 OID 26655)
 -- Name: certificate; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -150,7 +150,7 @@ CREATE TABLE public.certificate (
 ALTER TABLE public.certificate OWNER TO postgres;
 
 --
--- TOC entry 208 (class 1259 OID 16726)
+-- TOC entry 208 (class 1259 OID 26661)
 -- Name: certificate_certificatekey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -175,7 +175,7 @@ ALTER SEQUENCE public.certificate_certificatekey_seq OWNED BY public.certificate
 
 
 --
--- TOC entry 209 (class 1259 OID 16728)
+-- TOC entry 209 (class 1259 OID 26663)
 -- Name: certificatecourse; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -189,7 +189,7 @@ CREATE TABLE public.certificatecourse (
 ALTER TABLE public.certificatecourse OWNER TO postgres;
 
 --
--- TOC entry 210 (class 1259 OID 16734)
+-- TOC entry 210 (class 1259 OID 26669)
 -- Name: course; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -204,7 +204,7 @@ CREATE TABLE public.course (
 ALTER TABLE public.course OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 16740)
+-- TOC entry 211 (class 1259 OID 26675)
 -- Name: course_coursekey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -229,7 +229,7 @@ ALTER SEQUENCE public.course_coursekey_seq OWNED BY public.course.coursekey;
 
 
 --
--- TOC entry 212 (class 1259 OID 16742)
+-- TOC entry 212 (class 1259 OID 26677)
 -- Name: coursesection; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -246,7 +246,7 @@ CREATE TABLE public.coursesection (
 ALTER TABLE public.coursesection OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 16745)
+-- TOC entry 213 (class 1259 OID 26680)
 -- Name: coursesection_sectionkey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -271,7 +271,7 @@ ALTER SEQUENCE public.coursesection_sectionkey_seq OWNED BY public.coursesection
 
 
 --
--- TOC entry 214 (class 1259 OID 16747)
+-- TOC entry 214 (class 1259 OID 26682)
 -- Name: instructionalarea; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -285,7 +285,7 @@ CREATE TABLE public.instructionalarea (
 ALTER TABLE public.instructionalarea OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 16753)
+-- TOC entry 215 (class 1259 OID 26688)
 -- Name: instructionalarea_instructionalareakey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -310,7 +310,7 @@ ALTER SEQUENCE public.instructionalarea_instructionalareakey_seq OWNED BY public
 
 
 --
--- TOC entry 216 (class 1259 OID 16755)
+-- TOC entry 216 (class 1259 OID 26690)
 -- Name: instructor; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -325,7 +325,7 @@ CREATE TABLE public.instructor (
 ALTER TABLE public.instructor OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 16758)
+-- TOC entry 217 (class 1259 OID 26693)
 -- Name: instructor_instructorkey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -350,7 +350,7 @@ ALTER SEQUENCE public.instructor_instructorkey_seq OWNED BY public.instructor.in
 
 
 --
--- TOC entry 218 (class 1259 OID 16760)
+-- TOC entry 218 (class 1259 OID 26695)
 -- Name: instructorarea; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -363,7 +363,7 @@ CREATE TABLE public.instructorarea (
 ALTER TABLE public.instructorarea OWNER TO postgres;
 
 --
--- TOC entry 219 (class 1259 OID 16763)
+-- TOC entry 219 (class 1259 OID 26698)
 -- Name: loginhistory; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -377,7 +377,7 @@ CREATE TABLE public.loginhistory (
 ALTER TABLE public.loginhistory OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 16767)
+-- TOC entry 220 (class 1259 OID 26702)
 -- Name: loginhistory_loginhistorykey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -402,7 +402,7 @@ ALTER SEQUENCE public.loginhistory_loginhistorykey_seq OWNED BY public.loginhist
 
 
 --
--- TOC entry 221 (class 1259 OID 16769)
+-- TOC entry 221 (class 1259 OID 26704)
 -- Name: logintable; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -418,7 +418,7 @@ CREATE TABLE public.logintable (
 ALTER TABLE public.logintable OWNER TO postgres;
 
 --
--- TOC entry 222 (class 1259 OID 16775)
+-- TOC entry 222 (class 1259 OID 26710)
 -- Name: logintable_logintablekey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -443,7 +443,7 @@ ALTER SEQUENCE public.logintable_logintablekey_seq OWNED BY public.logintable.lo
 
 
 --
--- TOC entry 223 (class 1259 OID 16777)
+-- TOC entry 223 (class 1259 OID 26712)
 -- Name: person; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -464,7 +464,7 @@ CREATE TABLE public.person (
 ALTER TABLE public.person OWNER TO postgres;
 
 --
--- TOC entry 224 (class 1259 OID 16783)
+-- TOC entry 224 (class 1259 OID 26718)
 -- Name: person_personkey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -489,7 +489,7 @@ ALTER SEQUENCE public.person_personkey_seq OWNED BY public.person.personkey;
 
 
 --
--- TOC entry 225 (class 1259 OID 16785)
+-- TOC entry 225 (class 1259 OID 26720)
 -- Name: pricehistory; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -504,7 +504,7 @@ CREATE TABLE public.pricehistory (
 ALTER TABLE public.pricehistory OWNER TO postgres;
 
 --
--- TOC entry 226 (class 1259 OID 16788)
+-- TOC entry 226 (class 1259 OID 26723)
 -- Name: pricehistory_pricehistorykey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -529,7 +529,7 @@ ALTER SEQUENCE public.pricehistory_pricehistorykey_seq OWNED BY public.pricehist
 
 
 --
--- TOC entry 227 (class 1259 OID 16790)
+-- TOC entry 227 (class 1259 OID 26725)
 -- Name: quarter; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -542,7 +542,7 @@ CREATE TABLE public.quarter (
 ALTER TABLE public.quarter OWNER TO postgres;
 
 --
--- TOC entry 228 (class 1259 OID 16796)
+-- TOC entry 228 (class 1259 OID 26731)
 -- Name: quarter_quarterkey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -567,7 +567,7 @@ ALTER SEQUENCE public.quarter_quarterkey_seq OWNED BY public.quarter.quarterkey;
 
 
 --
--- TOC entry 229 (class 1259 OID 16798)
+-- TOC entry 229 (class 1259 OID 26733)
 -- Name: roster; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -582,7 +582,7 @@ CREATE TABLE public.roster (
 ALTER TABLE public.roster OWNER TO postgres;
 
 --
--- TOC entry 230 (class 1259 OID 16804)
+-- TOC entry 230 (class 1259 OID 26739)
 -- Name: roster_rosterkey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -607,7 +607,7 @@ ALTER SEQUENCE public.roster_rosterkey_seq OWNED BY public.roster.rosterkey;
 
 
 --
--- TOC entry 231 (class 1259 OID 16806)
+-- TOC entry 231 (class 1259 OID 26741)
 -- Name: status; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -620,7 +620,7 @@ CREATE TABLE public.status (
 ALTER TABLE public.status OWNER TO postgres;
 
 --
--- TOC entry 232 (class 1259 OID 16812)
+-- TOC entry 232 (class 1259 OID 26747)
 -- Name: status_statuskey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -645,7 +645,7 @@ ALTER SEQUENCE public.status_statuskey_seq OWNED BY public.status.statuskey;
 
 
 --
--- TOC entry 233 (class 1259 OID 16814)
+-- TOC entry 233 (class 1259 OID 26749)
 -- Name: student; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -660,7 +660,7 @@ CREATE TABLE public.student (
 ALTER TABLE public.student OWNER TO postgres;
 
 --
--- TOC entry 234 (class 1259 OID 16817)
+-- TOC entry 234 (class 1259 OID 26752)
 -- Name: student_studentkey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -685,7 +685,7 @@ ALTER SEQUENCE public.student_studentkey_seq OWNED BY public.student.studentkey;
 
 
 --
--- TOC entry 235 (class 1259 OID 16819)
+-- TOC entry 235 (class 1259 OID 26754)
 -- Name: substitution; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -702,7 +702,7 @@ CREATE TABLE public.substitution (
 ALTER TABLE public.substitution OWNER TO postgres;
 
 --
--- TOC entry 236 (class 1259 OID 16822)
+-- TOC entry 236 (class 1259 OID 26757)
 -- Name: substitution_substitutionkey_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -727,7 +727,7 @@ ALTER SEQUENCE public.substitution_substitutionkey_seq OWNED BY public.substitut
 
 
 --
--- TOC entry 2833 (class 2604 OID 16824)
+-- TOC entry 2833 (class 2604 OID 26759)
 -- Name: businessrule businessrulekey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -735,7 +735,7 @@ ALTER TABLE ONLY public.businessrule ALTER COLUMN businessrulekey SET DEFAULT ne
 
 
 --
--- TOC entry 2834 (class 2604 OID 16825)
+-- TOC entry 2834 (class 2604 OID 26760)
 -- Name: certadmin certadminkey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -743,7 +743,7 @@ ALTER TABLE ONLY public.certadmin ALTER COLUMN certadminkey SET DEFAULT nextval(
 
 
 --
--- TOC entry 2835 (class 2604 OID 16826)
+-- TOC entry 2835 (class 2604 OID 26761)
 -- Name: certificate certificatekey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -751,7 +751,7 @@ ALTER TABLE ONLY public.certificate ALTER COLUMN certificatekey SET DEFAULT next
 
 
 --
--- TOC entry 2836 (class 2604 OID 16827)
+-- TOC entry 2836 (class 2604 OID 26762)
 -- Name: course coursekey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -759,7 +759,7 @@ ALTER TABLE ONLY public.course ALTER COLUMN coursekey SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2837 (class 2604 OID 16828)
+-- TOC entry 2837 (class 2604 OID 26763)
 -- Name: coursesection sectionkey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -767,7 +767,7 @@ ALTER TABLE ONLY public.coursesection ALTER COLUMN sectionkey SET DEFAULT nextva
 
 
 --
--- TOC entry 2838 (class 2604 OID 16829)
+-- TOC entry 2838 (class 2604 OID 26764)
 -- Name: instructionalarea instructionalareakey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -775,7 +775,7 @@ ALTER TABLE ONLY public.instructionalarea ALTER COLUMN instructionalareakey SET 
 
 
 --
--- TOC entry 2839 (class 2604 OID 16830)
+-- TOC entry 2839 (class 2604 OID 26765)
 -- Name: instructor instructorkey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -783,7 +783,7 @@ ALTER TABLE ONLY public.instructor ALTER COLUMN instructorkey SET DEFAULT nextva
 
 
 --
--- TOC entry 2841 (class 2604 OID 16831)
+-- TOC entry 2841 (class 2604 OID 26766)
 -- Name: loginhistory loginhistorykey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -791,7 +791,7 @@ ALTER TABLE ONLY public.loginhistory ALTER COLUMN loginhistorykey SET DEFAULT ne
 
 
 --
--- TOC entry 2842 (class 2604 OID 16832)
+-- TOC entry 2842 (class 2604 OID 26767)
 -- Name: logintable logintablekey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -799,7 +799,7 @@ ALTER TABLE ONLY public.logintable ALTER COLUMN logintablekey SET DEFAULT nextva
 
 
 --
--- TOC entry 2843 (class 2604 OID 16833)
+-- TOC entry 2843 (class 2604 OID 26768)
 -- Name: person personkey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -807,7 +807,7 @@ ALTER TABLE ONLY public.person ALTER COLUMN personkey SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2844 (class 2604 OID 16834)
+-- TOC entry 2844 (class 2604 OID 26769)
 -- Name: pricehistory pricehistorykey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -815,7 +815,7 @@ ALTER TABLE ONLY public.pricehistory ALTER COLUMN pricehistorykey SET DEFAULT ne
 
 
 --
--- TOC entry 2845 (class 2604 OID 16835)
+-- TOC entry 2845 (class 2604 OID 26770)
 -- Name: quarter quarterkey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -823,7 +823,7 @@ ALTER TABLE ONLY public.quarter ALTER COLUMN quarterkey SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2846 (class 2604 OID 16836)
+-- TOC entry 2846 (class 2604 OID 26771)
 -- Name: roster rosterkey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -831,7 +831,7 @@ ALTER TABLE ONLY public.roster ALTER COLUMN rosterkey SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2847 (class 2604 OID 16837)
+-- TOC entry 2847 (class 2604 OID 26772)
 -- Name: status statuskey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -839,7 +839,7 @@ ALTER TABLE ONLY public.status ALTER COLUMN statuskey SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2848 (class 2604 OID 16838)
+-- TOC entry 2848 (class 2604 OID 26773)
 -- Name: student studentkey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -847,7 +847,7 @@ ALTER TABLE ONLY public.student ALTER COLUMN studentkey SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2849 (class 2604 OID 16839)
+-- TOC entry 2849 (class 2604 OID 26774)
 -- Name: substitution substitutionkey; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -855,7 +855,7 @@ ALTER TABLE ONLY public.substitution ALTER COLUMN substitutionkey SET DEFAULT ne
 
 
 --
--- TOC entry 3037 (class 0 OID 16707)
+-- TOC entry 3037 (class 0 OID 26642)
 -- Dependencies: 203
 -- Data for Name: businessrule; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -868,7 +868,7 @@ INSERT INTO public.businessrule VALUES (16, 'Instructors receive 60% of the mone
 
 
 --
--- TOC entry 3039 (class 0 OID 16715)
+-- TOC entry 3039 (class 0 OID 26650)
 -- Dependencies: 205
 -- Data for Name: certadmin; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -880,22 +880,22 @@ INSERT INTO public.certadmin VALUES (4, 4, 1);
 
 
 --
--- TOC entry 3041 (class 0 OID 16720)
+-- TOC entry 3041 (class 0 OID 26655)
 -- Dependencies: 207
 -- Data for Name: certificate; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.certificate VALUES (1, 'Java Programming', 'From the basics to mastery');
-INSERT INTO public.certificate VALUES (3, 'Web Design', 'HTML5, CSS and design principles');
+INSERT INTO public.certificate VALUES (3, 'Web Design', 'HTML5, CSS, and design principles');
 INSERT INTO public.certificate VALUES (5, 'Database Development', 'Relational and NoSQL design and development');
-INSERT INTO public.certificate VALUES (6, 'App Development', 'Phone app development in Android and IOS');
+INSERT INTO public.certificate VALUES (6, 'App Development', 'Phone app development in Android and iOS');
 INSERT INTO public.certificate VALUES (7, 'IT Core', 'Basics to build on');
 INSERT INTO public.certificate VALUES (2, 'Python Programming', 'Power Python including data and science libraries');
-INSERT INTO public.certificate VALUES (4, 'Javascript', 'Complete Client and server side JavaScript');
+INSERT INTO public.certificate VALUES (4, 'JavaScript', 'Complete client- and server-side JavaScript');
 
 
 --
--- TOC entry 3043 (class 0 OID 16728)
+-- TOC entry 3043 (class 0 OID 26663)
 -- Dependencies: 209
 -- Data for Name: certificatecourse; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -930,43 +930,43 @@ INSERT INTO public.certificatecourse VALUES (6, 27, 3.0);
 
 
 --
--- TOC entry 3044 (class 0 OID 16734)
+-- TOC entry 3044 (class 0 OID 26669)
 -- Dependencies: 210
 -- Data for Name: course; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.course VALUES (3, 'Web Pages 101', 3, 'Introduction to HTML and CSS');
-INSERT INTO public.course VALUES (8, 'Java Services', 5, 'Service oriented architechture with Java');
+INSERT INTO public.course VALUES (8, 'Java Services', 5, 'Service-oriented architecture with Java');
 INSERT INTO public.course VALUES (11, 'Django', 5, 'Python web development');
 INSERT INTO public.course VALUES (15, 'Web Projects', 5, 'Designing web pages for real clients');
 INSERT INTO public.course VALUES (19, 'SQL', 5, 'SQL for creating and manipulating database data and objects');
 INSERT INTO public.course VALUES (5, 'Introduction to Java', 5, 'Basics of Java programming logic and structures');
 INSERT INTO public.course VALUES (17, 'Advanced JavaScript', 3, 'JSON, selected JavaScript frameworks');
 INSERT INTO public.course VALUES (27, 'App Development Capstone', 5, 'Design and create an app');
-INSERT INTO public.course VALUES (6, 'Object-Oriented Programming with Java', 5, 'Object-oriented programming concepts and practice');
+INSERT INTO public.course VALUES (6, 'Object-oriented Programming with Java', 5, 'Object-oriented programming concepts and practice');
 INSERT INTO public.course VALUES (1, 'Beginning Programming', 5, 'Introduction to basic programming logic and structures');
-INSERT INTO public.course VALUES (2, 'First Relational Database', 5, 'Introduction Relational database structure and design');
-INSERT INTO public.course VALUES (4, 'Operating Systems and Basic Connectivity', 5, 'Introduction to Operating Systems and basic network concepts');
+INSERT INTO public.course VALUES (2, 'First Relational Database', 5, 'Introduction to relational database structure and design');
+INSERT INTO public.course VALUES (4, 'Operating Systems and Basic Connectivity', 5, 'Introduction to operating systems and basic network concepts');
 INSERT INTO public.course VALUES (7, 'Data Structures with Java', 5, 'Data structures');
 INSERT INTO public.course VALUES (9, 'Introduction to Python', 5, 'Basics of Python programming logic and structures');
 INSERT INTO public.course VALUES (10, 'Python Projects', 5, 'Programming projects with Python, emphasis on using libraries');
 INSERT INTO public.course VALUES (12, 'Python Data Analytics', 5, ' Python data analysis libraries and connectivity to databases');
-INSERT INTO public.course VALUES (13, 'Web Design Principles', 3, 'HTML, advanced CSS and basic user design');
+INSERT INTO public.course VALUES (13, 'Web Design Principles', 3, 'HTML, advanced CSS, and basic user design');
 INSERT INTO public.course VALUES (14, 'Graphics for Web Design', 3, 'Creating, manipulating, and displaying graphics on web pages');
-INSERT INTO public.course VALUES (16, 'Introduction to Javascipt', 3, 'Basics of JavaScript client programming logic and structures');
-INSERT INTO public.course VALUES (18, 'Server Side JavaScript', 5, 'Server-side JavaScript using frameworks such as Node.Js');
+INSERT INTO public.course VALUES (16, 'Introduction to JavaScript', 3, 'Basics of JavaScript client programming logic and structures');
+INSERT INTO public.course VALUES (18, 'Server-side JavaScript', 5, 'Server-side JavaScript using frameworks such as node.js');
 INSERT INTO public.course VALUES (20, 'NoSQL', 5, 'Basics of developing and querying NoSQL databases');
-INSERT INTO public.course VALUES (21, 'ETL and Reporting Tools', 5, 'Exporting, transforming and loading data for analysis. Reporting and visualization of data');
-INSERT INTO public.course VALUES (22, 'Database Administration', 5, 'Administrating both relational and NoSQL databases, locally and on cloud');
+INSERT INTO public.course VALUES (21, 'ETL and Reporting Tools', 5, 'Exporting, transforming, and loading data for analysis. Reporting and visualization of data');
+INSERT INTO public.course VALUES (22, 'Database Administration', 5, 'Administrating both relational and NoSQL databases, locally and on the cloud');
 INSERT INTO public.course VALUES (23, 'Android App Development', 5, 'Basics of Android programming logic and structures');
 INSERT INTO public.course VALUES (24, 'Advanced Android', 5, 'Advanced Android programming including SQLite');
-INSERT INTO public.course VALUES (25, 'Introduction to iOS App Development', 5, 'Basics of iOS programming logic and sructures');
+INSERT INTO public.course VALUES (25, 'Introduction to iOS App Development', 5, 'Basics of iOS programming logic and structures');
 INSERT INTO public.course VALUES (26, 'Advanced iOS App Development', 5, 'Advanced iOS logic and structures');
 INSERT INTO public.course VALUES (28, 'Statistics for Data Analysis', 5, 'Statistics with a focus on data science and analytics');
 
 
 --
--- TOC entry 3046 (class 0 OID 16742)
+-- TOC entry 3046 (class 0 OID 26677)
 -- Dependencies: 212
 -- Data for Name: coursesection; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1069,21 +1069,21 @@ INSERT INTO public.coursesection VALUES (115, 27, 6, 2021, 3, 3);
 
 
 --
--- TOC entry 3048 (class 0 OID 16747)
+-- TOC entry 3048 (class 0 OID 26682)
 -- Dependencies: 214
 -- Data for Name: instructionalarea; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.instructionalarea VALUES (1, 'Programming', NULL);
 INSERT INTO public.instructionalarea VALUES (3, 'Mobile Apps', NULL);
-INSERT INTO public.instructionalarea VALUES (5, 'Web Development', 'Backend programing, database connections, etc.');
+INSERT INTO public.instructionalarea VALUES (5, 'Web Development', 'Backend programming, database connections, etc.');
 INSERT INTO public.instructionalarea VALUES (6, 'Database Development', NULL);
-INSERT INTO public.instructionalarea VALUES (2, 'Web Design', 'HTML CSS graphics and user design');
+INSERT INTO public.instructionalarea VALUES (2, 'Web Design', 'HTML, CSS, graphics, and user design');
 INSERT INTO public.instructionalarea VALUES (4, 'JavaScript Development', NULL);
 
 
 --
--- TOC entry 3050 (class 0 OID 16755)
+-- TOC entry 3050 (class 0 OID 26690)
 -- Dependencies: 216
 -- Data for Name: instructor; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1102,7 +1102,7 @@ INSERT INTO public.instructor VALUES (11, 403, '2021-01-22', 1);
 
 
 --
--- TOC entry 3052 (class 0 OID 16760)
+-- TOC entry 3052 (class 0 OID 26695)
 -- Dependencies: 218
 -- Data for Name: instructorarea; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1126,7 +1126,7 @@ INSERT INTO public.instructorarea VALUES (6, 10);
 
 
 --
--- TOC entry 3053 (class 0 OID 16763)
+-- TOC entry 3053 (class 0 OID 26698)
 -- Dependencies: 219
 -- Data for Name: loginhistory; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1134,7 +1134,7 @@ INSERT INTO public.instructorarea VALUES (6, 10);
 
 
 --
--- TOC entry 3055 (class 0 OID 16769)
+-- TOC entry 3055 (class 0 OID 26704)
 -- Dependencies: 221
 -- Data for Name: logintable; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1356,7 +1356,7 @@ INSERT INTO public.logintable VALUES (214, 'CSanders', 402, '$2a$08$EtTsNW54l4/F
 
 
 --
--- TOC entry 3057 (class 0 OID 16777)
+-- TOC entry 3057 (class 0 OID 26712)
 -- Dependencies: 223
 -- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1579,7 +1579,7 @@ INSERT INTO public.person VALUES (217, 'Mcclain', 'Hadley', 'Quisque@nisiaodio.n
 
 
 --
--- TOC entry 3059 (class 0 OID 16785)
+-- TOC entry 3059 (class 0 OID 26720)
 -- Dependencies: 225
 -- Data for Name: pricehistory; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1590,7 +1590,7 @@ INSERT INTO public.pricehistory VALUES (3, '2021-01-01', 250.00, 0.05);
 
 
 --
--- TOC entry 3061 (class 0 OID 16790)
+-- TOC entry 3061 (class 0 OID 26725)
 -- Dependencies: 227
 -- Data for Name: quarter; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1602,7 +1602,7 @@ INSERT INTO public.quarter VALUES (4, 'Summer');
 
 
 --
--- TOC entry 3063 (class 0 OID 16798)
+-- TOC entry 3063 (class 0 OID 26733)
 -- Dependencies: 229
 -- Data for Name: roster; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3573,7 +3573,7 @@ INSERT INTO public.roster VALUES (292, 12, 154, 3.30);
 
 
 --
--- TOC entry 3065 (class 0 OID 16806)
+-- TOC entry 3065 (class 0 OID 26741)
 -- Dependencies: 231
 -- Data for Name: status; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3585,7 +3585,7 @@ INSERT INTO public.status VALUES (4, 'unknown');
 
 
 --
--- TOC entry 3067 (class 0 OID 16814)
+-- TOC entry 3067 (class 0 OID 26749)
 -- Dependencies: 233
 -- Data for Name: student; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3793,7 +3793,7 @@ INSERT INTO public.student VALUES (199, 399, '2019-06-30', 4);
 
 
 --
--- TOC entry 3069 (class 0 OID 16819)
+-- TOC entry 3069 (class 0 OID 26754)
 -- Dependencies: 235
 -- Data for Name: substitution; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3945,7 +3945,7 @@ SELECT pg_catalog.setval('public.substitution_substitutionkey_seq', 1, false);
 
 
 --
--- TOC entry 2851 (class 2606 OID 16841)
+-- TOC entry 2851 (class 2606 OID 26776)
 -- Name: businessrule businessrule_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3954,7 +3954,7 @@ ALTER TABLE ONLY public.businessrule
 
 
 --
--- TOC entry 2853 (class 2606 OID 16843)
+-- TOC entry 2853 (class 2606 OID 26778)
 -- Name: certadmin certadmin_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3963,7 +3963,7 @@ ALTER TABLE ONLY public.certadmin
 
 
 --
--- TOC entry 2855 (class 2606 OID 16845)
+-- TOC entry 2855 (class 2606 OID 26780)
 -- Name: certificate certificate_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3972,7 +3972,7 @@ ALTER TABLE ONLY public.certificate
 
 
 --
--- TOC entry 2859 (class 2606 OID 16847)
+-- TOC entry 2859 (class 2606 OID 26782)
 -- Name: course course_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3981,7 +3981,7 @@ ALTER TABLE ONLY public.course
 
 
 --
--- TOC entry 2861 (class 2606 OID 16849)
+-- TOC entry 2861 (class 2606 OID 26784)
 -- Name: coursesection coursesection_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3990,7 +3990,7 @@ ALTER TABLE ONLY public.coursesection
 
 
 --
--- TOC entry 2863 (class 2606 OID 16851)
+-- TOC entry 2863 (class 2606 OID 26786)
 -- Name: instructionalarea instructionalarea_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3999,7 +3999,7 @@ ALTER TABLE ONLY public.instructionalarea
 
 
 --
--- TOC entry 2865 (class 2606 OID 16853)
+-- TOC entry 2865 (class 2606 OID 26788)
 -- Name: instructor instructor_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4008,7 +4008,7 @@ ALTER TABLE ONLY public.instructor
 
 
 --
--- TOC entry 2869 (class 2606 OID 16855)
+-- TOC entry 2869 (class 2606 OID 26790)
 -- Name: loginhistory loginhistory_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4017,7 +4017,7 @@ ALTER TABLE ONLY public.loginhistory
 
 
 --
--- TOC entry 2871 (class 2606 OID 16857)
+-- TOC entry 2871 (class 2606 OID 26792)
 -- Name: logintable logintable_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4026,7 +4026,7 @@ ALTER TABLE ONLY public.logintable
 
 
 --
--- TOC entry 2873 (class 2606 OID 16859)
+-- TOC entry 2873 (class 2606 OID 26794)
 -- Name: person person_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4035,7 +4035,7 @@ ALTER TABLE ONLY public.person
 
 
 --
--- TOC entry 2857 (class 2606 OID 16861)
+-- TOC entry 2857 (class 2606 OID 26796)
 -- Name: certificatecourse pk_certificatecourse; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4044,7 +4044,7 @@ ALTER TABLE ONLY public.certificatecourse
 
 
 --
--- TOC entry 2867 (class 2606 OID 16863)
+-- TOC entry 2867 (class 2606 OID 26798)
 -- Name: instructorarea pk_instructorarea; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4053,7 +4053,7 @@ ALTER TABLE ONLY public.instructorarea
 
 
 --
--- TOC entry 2877 (class 2606 OID 16865)
+-- TOC entry 2877 (class 2606 OID 26800)
 -- Name: pricehistory pricehistory_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4062,7 +4062,7 @@ ALTER TABLE ONLY public.pricehistory
 
 
 --
--- TOC entry 2879 (class 2606 OID 16867)
+-- TOC entry 2879 (class 2606 OID 26802)
 -- Name: quarter quarter_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4071,7 +4071,7 @@ ALTER TABLE ONLY public.quarter
 
 
 --
--- TOC entry 2881 (class 2606 OID 16869)
+-- TOC entry 2881 (class 2606 OID 26804)
 -- Name: roster roster_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4080,7 +4080,7 @@ ALTER TABLE ONLY public.roster
 
 
 --
--- TOC entry 2883 (class 2606 OID 16871)
+-- TOC entry 2883 (class 2606 OID 26806)
 -- Name: status status_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4089,7 +4089,7 @@ ALTER TABLE ONLY public.status
 
 
 --
--- TOC entry 2885 (class 2606 OID 16873)
+-- TOC entry 2885 (class 2606 OID 26808)
 -- Name: student student_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4098,7 +4098,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2887 (class 2606 OID 16875)
+-- TOC entry 2887 (class 2606 OID 26810)
 -- Name: substitution substitution_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4107,7 +4107,7 @@ ALTER TABLE ONLY public.substitution
 
 
 --
--- TOC entry 2875 (class 2606 OID 16877)
+-- TOC entry 2875 (class 2606 OID 26812)
 -- Name: person unique_email; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4116,7 +4116,7 @@ ALTER TABLE ONLY public.person
 
 
 --
--- TOC entry 2888 (class 2606 OID 16878)
+-- TOC entry 2888 (class 2606 OID 26813)
 -- Name: certadmin certadmin_personkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4125,7 +4125,7 @@ ALTER TABLE ONLY public.certadmin
 
 
 --
--- TOC entry 2889 (class 2606 OID 16883)
+-- TOC entry 2889 (class 2606 OID 26818)
 -- Name: certadmin certadmin_statuskey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4134,7 +4134,7 @@ ALTER TABLE ONLY public.certadmin
 
 
 --
--- TOC entry 2890 (class 2606 OID 16888)
+-- TOC entry 2890 (class 2606 OID 26823)
 -- Name: certificatecourse certificatecourse_certificatekey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4143,7 +4143,7 @@ ALTER TABLE ONLY public.certificatecourse
 
 
 --
--- TOC entry 2891 (class 2606 OID 16893)
+-- TOC entry 2891 (class 2606 OID 26828)
 -- Name: certificatecourse certificatecourse_coursekey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4152,7 +4152,7 @@ ALTER TABLE ONLY public.certificatecourse
 
 
 --
--- TOC entry 2892 (class 2606 OID 16898)
+-- TOC entry 2892 (class 2606 OID 26833)
 -- Name: coursesection coursesection_coursekey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4161,7 +4161,7 @@ ALTER TABLE ONLY public.coursesection
 
 
 --
--- TOC entry 2893 (class 2606 OID 16903)
+-- TOC entry 2893 (class 2606 OID 26838)
 -- Name: coursesection coursesection_instructorkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4170,7 +4170,7 @@ ALTER TABLE ONLY public.coursesection
 
 
 --
--- TOC entry 2894 (class 2606 OID 16908)
+-- TOC entry 2894 (class 2606 OID 26843)
 -- Name: coursesection fk_price; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4179,7 +4179,7 @@ ALTER TABLE ONLY public.coursesection
 
 
 --
--- TOC entry 2895 (class 2606 OID 16913)
+-- TOC entry 2895 (class 2606 OID 26848)
 -- Name: coursesection fk_quarter; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4188,7 +4188,7 @@ ALTER TABLE ONLY public.coursesection
 
 
 --
--- TOC entry 2896 (class 2606 OID 16918)
+-- TOC entry 2896 (class 2606 OID 26853)
 -- Name: instructor instructor_personkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4197,7 +4197,7 @@ ALTER TABLE ONLY public.instructor
 
 
 --
--- TOC entry 2897 (class 2606 OID 16923)
+-- TOC entry 2897 (class 2606 OID 26858)
 -- Name: instructor instructor_statuskey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4206,7 +4206,7 @@ ALTER TABLE ONLY public.instructor
 
 
 --
--- TOC entry 2898 (class 2606 OID 16928)
+-- TOC entry 2898 (class 2606 OID 26863)
 -- Name: instructorarea instructorarea_instructionalareakey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4215,7 +4215,7 @@ ALTER TABLE ONLY public.instructorarea
 
 
 --
--- TOC entry 2899 (class 2606 OID 16933)
+-- TOC entry 2899 (class 2606 OID 26868)
 -- Name: instructorarea instructorarea_instructorkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4224,7 +4224,7 @@ ALTER TABLE ONLY public.instructorarea
 
 
 --
--- TOC entry 2900 (class 2606 OID 16938)
+-- TOC entry 2900 (class 2606 OID 26873)
 -- Name: loginhistory loginhistory_logintablekey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4233,7 +4233,7 @@ ALTER TABLE ONLY public.loginhistory
 
 
 --
--- TOC entry 2901 (class 2606 OID 16943)
+-- TOC entry 2901 (class 2606 OID 26878)
 -- Name: logintable logintable_personkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4242,7 +4242,7 @@ ALTER TABLE ONLY public.logintable
 
 
 --
--- TOC entry 2902 (class 2606 OID 16948)
+-- TOC entry 2902 (class 2606 OID 26883)
 -- Name: roster roster_sectionkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4251,7 +4251,7 @@ ALTER TABLE ONLY public.roster
 
 
 --
--- TOC entry 2903 (class 2606 OID 16953)
+-- TOC entry 2903 (class 2606 OID 26888)
 -- Name: roster roster_studentkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4260,7 +4260,7 @@ ALTER TABLE ONLY public.roster
 
 
 --
--- TOC entry 2904 (class 2606 OID 16958)
+-- TOC entry 2904 (class 2606 OID 26893)
 -- Name: student student_personkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4269,7 +4269,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2905 (class 2606 OID 16963)
+-- TOC entry 2905 (class 2606 OID 26898)
 -- Name: student student_statuskey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4278,7 +4278,7 @@ ALTER TABLE ONLY public.student
 
 
 --
--- TOC entry 2906 (class 2606 OID 16968)
+-- TOC entry 2906 (class 2606 OID 26903)
 -- Name: substitution substitution_certadminkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4287,7 +4287,7 @@ ALTER TABLE ONLY public.substitution
 
 
 --
--- TOC entry 2907 (class 2606 OID 16973)
+-- TOC entry 2907 (class 2606 OID 26908)
 -- Name: substitution substitution_certificatekey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4296,7 +4296,7 @@ ALTER TABLE ONLY public.substitution
 
 
 --
--- TOC entry 2908 (class 2606 OID 16978)
+-- TOC entry 2908 (class 2606 OID 26913)
 -- Name: substitution substitution_coursekey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4305,7 +4305,7 @@ ALTER TABLE ONLY public.substitution
 
 
 --
--- TOC entry 2909 (class 2606 OID 16983)
+-- TOC entry 2909 (class 2606 OID 26918)
 -- Name: substitution substitution_studentkey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4314,7 +4314,7 @@ ALTER TABLE ONLY public.substitution
 
 
 --
--- TOC entry 2910 (class 2606 OID 16988)
+-- TOC entry 2910 (class 2606 OID 26923)
 -- Name: substitution substitution_substitutekey_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -4322,7 +4322,7 @@ ALTER TABLE ONLY public.substitution
     ADD CONSTRAINT substitution_substitutekey_fkey FOREIGN KEY (substitutekey) REFERENCES public.course(coursekey);
 
 
--- Completed on 2020-06-09 11:23:15
+-- Completed on 2020-06-29 11:24:34
 
 --
 -- PostgreSQL database dump complete
