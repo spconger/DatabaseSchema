@@ -1269,8 +1269,8 @@ INSERT INTO public.person VALUES (55, 'Olson', 'Sonya', 'solson@gmail.com', '258
 INSERT INTO public.person VALUES (4, 'Zimmerman', 'Toby', 'TZimmerman@gmail.com', '2065551212   ', '2019-02-03');
 INSERT INTO public.person VALUES (58, 'Master', 'Carley', 'cmasters@msn.com', '2065553332   ', '2019-12-05');
 INSERT INTO public.person VALUES (1, 'Kendle', 'Lynn', 'lynn.kendle@gmail.com', '2065551312   ', '2019-02-02');
-INSERT INTO public.person VALUES (9, 'Patterson', 'Jody', 'JPatterson@gmail.com', '2065554431   ', '2020-06-10');
-INSERT INTO public.person VALUES (13, 'Masters', 'Fae', 'FMasters@gmail.com', '2065552123   ', '2020-06-21');
+INSERT INTO public.person VALUES (9, 'Patterson', 'Jody', 'JPatterson@gmail.com', '206555431   ', '2020-06-10');
+INSERT INTO public.person VALUES (13, 'Masters', 'Fae', 'FMasters@gmail.com', '206555212   ', '2020-06-21');
 INSERT INTO public.person VALUES (2, 'Carol', 'Linda', 'LindaCarol@gmail.com', '2065551234   ', '2021-03-25');
 INSERT INTO public.person VALUES (6, 'Carmel', 'Bob', 'BCarmel@gmail.com', '2065551202   ', '2020-05-12');
 INSERT INTO public.person VALUES (7, 'Lewis', 'Mary', 'MLewis@gmail.com', '3605551000   ', '2020-05-21');
