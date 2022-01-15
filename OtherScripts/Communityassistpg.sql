@@ -1418,7 +1418,7 @@ INSERT INTO public.personaddress VALUES (49, 42, '321 North ave', 'Kent', 'WA', 
 INSERT INTO public.personaddress VALUES (38, 32, '45467 Mason', 'Renton', 'WA', '98055      ', '345');
 INSERT INTO public.personaddress VALUES (52, 45, '121 Trainside', 'Renton', 'WA', '98055      ', '214');
 INSERT INTO public.personaddress VALUES (62, 55, '95 West Hannford', 'Tukwila', 'WA', '98108      ', 'Suite 545');
-INSERT INTO public.personaddress VALUES (122, 76, '303 Eastlake Way', 'Seattle ', 'WA', '98100      ', NULL);
+INSERT INTO public.personaddress VALUES (122, 76, '303 Eastlake Way', 'Seattle', 'WA', '98100      ', NULL);
 INSERT INTO public.personaddress VALUES (142, 96, '1201 East 8th', 'Bellevue', 'WA', '98006      ', '756');
 INSERT INTO public.personaddress VALUES (182, 114, '204 56th Street', 'Redmond', 'WA', '98033      ', NULL);
 INSERT INTO public.personaddress VALUES (198, 130, '217 Sount Meridian', 'Puyallup', 'WA', '98371      ', '101');
